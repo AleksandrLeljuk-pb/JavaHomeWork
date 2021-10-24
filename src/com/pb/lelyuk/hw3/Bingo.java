@@ -11,16 +11,15 @@ public class Bingo {
         int playerNum;
         int attempt = 0;
 
-        System.out.println("Хочешь поиграть в игру 'Угадай число' ? (y / n) ");
+        System.out.println("Хочеш пограти у гру 'Вгадай число' ? (y / n) ");
         playerAnsv = scan.next();
         if (playerAnsv.equalsIgnoreCase("y")) {
             randomNum0 = Math.random()*100;
-            randomNum = (int)randomNum0; //данная функция позволяет генерить целіе числа от 0 до 99
+            randomNum = (int)randomNum0; //ця функція дозволяє генерувати цілі числа від 0 до 99
             if (randomNum > 0) {
                 randomNum++;
-            }                            //организовываем возможность генерации случайного числа от 0 до 100
-//            randomNum = 10;
-            System.out.println("Я загадал число, попробуй угадать его - введи свой вариант (целое число от 0 до 100)!");
+            }                            //організуємо можливість генерації випадкового числа від 0 до 100
+            System.out.println("Я загадав число, спробуй вгадати його - введи свій варіант (ціле число від 0 до 100)!");
             playerNum = scan.nextInt();
 
         } else  return;
@@ -28,20 +27,20 @@ public class Bingo {
             attempt++;
             if (playerNum == randomNum) {
                // continue;
-               System.out.println("Поздравляю!!! Вы угадали на попытке " + attempt + "!!!");
+               System.out.println("Вітаю!!! Ви вгадали на спробі " + attempt + "!!!");
                 break;
             }
 
              if (playerNum != randomNum) {
-                System.out.println("Вы не угадали!");
+                System.out.println("Ви не вгадали!");
                 if (playerNum < randomNum) {
-                    System.out.println("Задуманное число больше Вашего варианта");
-                } else System.out.println("Задуманное число меньше Вашего варианта");
-                System.out.println("Использовано попыток " + attempt);
-                System.out.println("Хотите еще одну попытку? (y/n)");
+                    System.out.println("Задумане число більше Вашого варіанту");
+                } else System.out.println("Задумане число менше Вашого варіанту");
+                System.out.println("Використано спроб " + attempt);
+                System.out.println("Хочете ще одну спробу? (y/n)");
                 playerAnsv = scan.next();
                 if (playerAnsv.equalsIgnoreCase("y")) {
-                    System.out.println("Введите число");
+                    System.out.println("Введіть число");
                     playerNum = scan.nextInt();
                     continue;
                 } else break;
@@ -52,7 +51,7 @@ public class Bingo {
 //        randomNum0 = Math.random()*100;
 //        randomNum = (int)randomNum0;
 //        System.out.println(randomNum0);
-        System.out.println("Загаданное число было " + randomNum);
+        System.out.println("Задумане число було " + randomNum);
 
     }
 }
