@@ -25,6 +25,5 @@ public class CapitalLetter {
         }
         System.out.println("відкореговане речення:");
         System.out.println(sentense2);
-
     }
 }
