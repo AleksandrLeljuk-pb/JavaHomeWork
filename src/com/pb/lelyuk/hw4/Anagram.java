@@ -5,11 +5,11 @@ import java.util.Scanner;
 
 public class Anagram {
 
-    static char[] sentense(String sentense3) {
-        sentense3 = sentense3.replaceAll("\\W", ""); //удаляем пробелы и пунктуацию
-        char[] sentense = sentense3.toCharArray();                   //преобразуем строку в массив
-        Arrays.sort(sentense);                                       //сортируем массив
-            return sentense;
+    static char[] sentence(String sentence3) {
+        sentence3 = sentence3.replaceAll("(?U)\\W", ""); //удаляем пробелы и пунктуацию
+        char[] sentence = sentence3.toCharArray();                   //преобразуем строку в массив
+        Arrays.sort(sentence);                                       //сортируем массив
+        return sentence;
     }
 
     public static void main(String[] args) {
@@ -20,18 +20,20 @@ public class Anagram {
         System.out.println("Введіть речення № 2");
         String sentense2 = scan.nextLine();
 
-        char[] sentens11 = sentense(sentense1);                //получаем из метода массив сформированный из 1 предложения
+        char[] sentens11 = sentence(sentense1);                //получаем из метода массив сформированный из 1 предложения
 
-        char[] sentens21 = sentense(sentense2);               //получаем из метода массив сформированный из 2 предложения
+        char[] sentens21 = sentence(sentense2);               //получаем из метода массив сформированный из 2 предложения
 
-        Boolean result = Arrays.equals(sentens11, sentens21);   //сравниваем два массива (условие: массив 1 равен массиву 2)
+        boolean result = Arrays.equals(sentens11, sentens21);   //сравниваем два массива (условие: массив 1 равен массиву 2)
         System.out.println(result);
-        if(result == true) {
+        if (result) {
             System.out.println("Друге речення є анаграмою першого речення");
-        } else System.out.println("Друге речення НЕ Є анаграмою першого речення!");
-
+        } else {
+            System.out.println("Друге речення НЕ Є анаграмою першого речення!");
         }
 
+    }
 
+// Слатинскими буквами и с цифрами все работает!!!!
 
 }
