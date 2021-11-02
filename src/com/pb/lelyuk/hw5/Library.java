@@ -5,6 +5,8 @@ public class Library {
         Book book1 = new Book();
         Book book2 = new Book();
         Book book3 = new Book();
+        Book book4 = new Book();
+        Book book5 = new Book();
 
         book1.setTitle("The Adventures of Tom Sawyer");
         book1.setAuthor("Twain Mark");
@@ -17,6 +19,14 @@ public class Library {
         book3.setTitle("Понедельник начинается в субботу");
         book3.setAuthor("Стругацкий А., Стругацкий Б.");
         book3.setPublicYear(1976);
+
+        book4.setTitle("The It");
+        book4.setAuthor("King Stiven");
+        book4.setPublicYear(1985);
+
+        book5.setTitle("Улитка на склоне");
+        book5.setAuthor("Стругацкий А., Стругацкий Б.");
+        book5.setPublicYear(1985);
 
         Reader reader1 = new Reader();
         Reader reader2 = new Reader();
@@ -48,6 +58,8 @@ public class Library {
         System.out.println(book1.getInfoBook());
         System.out.println(book2.getInfoBook());
         System.out.println(book3.getInfoBook());
+        System.out.println(book4.getInfoBook());
+        System.out.println(book5.getInfoBook());
 
         System.out.println("Читачі: ");
         System.out.println(reader1.getInfoReader());

@@ -32,6 +32,5 @@ public class Book {
     String getInfoBook() {
         return "[назва книги: " + title + ", автор: " + author
                 + ", рік видання: " + publicYear + "]";
-
     }
 }
