@@ -1,5 +1,7 @@
 package com.pb.lelyuk.hw5;
 
+import com.pb.lelyuk.hw3.Array;
+
 public class Library {
     public static void main(String[] args) {
         Book book1 = new Book();
@@ -65,6 +67,11 @@ public class Library {
         System.out.println(reader1.getInfoReader());
         System.out.println(reader2.getInfoReader());
         System.out.println(reader3.getInfoReader());
+
+        reader1.takeBook(3);
+
+        String[] titles  = {book1.getTitle(), book2.getTitle(), book3.getTitle()};
+        reader1.takeBook(titles);
 
 
 

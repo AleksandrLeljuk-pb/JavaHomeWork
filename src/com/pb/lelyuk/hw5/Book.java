@@ -29,7 +29,7 @@ public class Book {
         this.publicYear = publicYear;
     }
 
-    String getInfoBook() {
+    public String getInfoBook() {
         return "[назва книги: " + title + ", автор: " + author
                 + ", рік видання: " + publicYear + "]";
     }
