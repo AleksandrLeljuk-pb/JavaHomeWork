@@ -33,4 +33,8 @@ public class Book {
         return "[назва книги: " + title + ", автор: " + author
                 + ", рік видання: " + publicYear + "]";
     }
+
+    public String getShortInfoBook() {
+        return title + " (" + author + ", " + publicYear + "р.)";
+    }
 }

@@ -54,8 +54,6 @@ public class Library {
         reader3.setPhoneNum("(001)111-000-11");
 
 
-
-
         System.out.println("Бібліотечний фонд: ");
         System.out.println(book1.getInfoBook());
         System.out.println(book2.getInfoBook());
@@ -63,15 +61,32 @@ public class Library {
         System.out.println(book4.getInfoBook());
         System.out.println(book5.getInfoBook());
 
+        System.out.println("----------------------------------------------------------");
+
         System.out.println("Читачі: ");
         System.out.println(reader1.getInfoReader());
         System.out.println(reader2.getInfoReader());
         System.out.println(reader3.getInfoReader());
 
+        System.out.println("----------------------------------------------------------");
+
         reader1.takeBook(3);
 
-        String[] titles  = {book1.getTitle(), book2.getTitle(), book3.getTitle()};
-        reader1.takeBook(titles);
+        System.out.println("----------------------------------------------------------");
+
+        reader2.takeBook("The Adventures of Tom Sawyer", "The DUNE", "Улитка на склоне");
+
+        reader1.takeBook(book1, book2, book3);
+
+        System.out.println("----------------------------------------------------------");
+
+        reader3.returnBook(2);
+
+        System.out.println("----------------------------------------------------------");
+
+        reader3.returnBook("The Adventures of Tom Sawyer", "The DUNE", "Улитка на склоне");
+
+        reader3.returnBook(book5, book4, book3);
 
 
 

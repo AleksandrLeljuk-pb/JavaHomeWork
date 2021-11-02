@@ -1,5 +1,6 @@
 package com.pb.lelyuk.hw5;
 
+import java.sql.SQLOutput;
 import java.util.Arrays;
 import java.util.Calendar;
 
@@ -57,13 +58,40 @@ public class Reader {
     }
 
     public void takeBook(int quantityBooks) {
-        System.out.println(readerName + " взял:" + quantityBooks + "книг");
+        System.out.println(readerName + " отримав книг:" + quantityBooks);
     }
 
-    public void takeBook(String[] titles) {
-        System.out.println(readerName + " взял:" + Arrays.toString(titles));
+    public void takeBook(String... titles3) {
+        System.out.println(readerName + " отримав наступні книги:");
+        for (String tit: titles3) {
+            System.out.println(tit);
+        }
     }
 
+    public void takeBook(Book... books) {
+        System.out.print(readerName + " отримав: ");
+        for (Book bks: books) {
+            System.out.print(bks.getShortInfoBook() + ", ");
+        }
+        System.out.println(" ");
+    }
 
+    public void returnBook(int quantityBooksReturn) {
+        System.out.println(readerName + " повернув книг: " + quantityBooksReturn);
+    }
 
+    public void returnBook(String... titles4) {
+        System.out.println(readerName + " повернув наступні книги:");
+        for (String tit: titles4) {
+            System.out.println(tit);
+        }
+    }
+
+    public void returnBook(Book... books) {
+        System.out.print(readerName + " повернув: ");
+        for (Book bks: books) {
+            System.out.print(bks.getShortInfoBook() + ", ");
+        }
+        System.out.println(" ");
+    }
 }
