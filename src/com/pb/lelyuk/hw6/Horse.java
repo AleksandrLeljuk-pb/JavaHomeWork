@@ -5,6 +5,12 @@ public class Horse extends Animal {
     private String noisehorse = "neigh";
     private String horsename;
 
+    public Horse(String food, String location, String noisehorse, String horsename) {
+        super(food, location);
+        this.noisehorse = noisehorse;
+        this.horsename = horsename;
+    }
+
 
     public String getFoodhorse() {
         return foodhorse;

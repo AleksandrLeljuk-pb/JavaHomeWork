@@ -3,7 +3,13 @@ package com.pb.lelyuk.hw6;
 public class Dog extends Animal {
     private String fooddog = "pedigree";
     private String noisedog = "bark";
-    private String dogname;
+    private String dogname = "Pluto";
+
+    public Dog(String food, String location, String noisedog, String dogname) {
+        super(food, location);
+        this.noisedog = noisedog;
+        this.dogname = dogname;
+    }
 
     public String getFooddog() {
         return fooddog;

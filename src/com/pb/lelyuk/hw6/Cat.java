@@ -2,11 +2,11 @@ package com.pb.lelyuk.hw6;
 
 public class Cat extends Animal {
     private String foodcat = "mice";
-    private String noisecat = "meow";
+    private String noisecat ;
     private String catname;
 
     public Cat(String food, String location, String noisecat, String catname) {
-        Animal(food, location);
+        super(food, location);
         this.noisecat = noisecat;
         this.catname = catname;
     }

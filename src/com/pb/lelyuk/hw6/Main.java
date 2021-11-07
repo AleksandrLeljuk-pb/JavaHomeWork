@@ -1,16 +1,17 @@
 package com.pb.lelyuk.hw6;
 
+
 public class Main {
     public static void main(String[] args) {
-        Animal anim = new Animal();
+        Animal anim = new Animal("meet", "location");
         anim.setAnimalName("Animal");
-        anim.setFood("meet");
+        //anim.setFood("meet");
 
         anim.makeNoise();
         anim.sleep();
         anim.eat();
 
-        Dog doggy = new Dog();
+        Dog doggy = new Dog("Pedigree", "Budka", "bark", "Pluto");
         doggy.setAnimalName("Dog");
         doggy.setFood("meet");
         doggy.eat();
@@ -21,7 +22,7 @@ public class Main {
         System.out.println(doggy.toString());
 
 
-        Cat kitty = new Cat();
+        Cat kitty = new Cat("mice", "roof", "meow", "Tom");
         kitty.setAnimalName("Cat");
         kitty.setFood("meet");
         kitty.eat();
@@ -31,7 +32,7 @@ public class Main {
         System.out.println("'" + kitty.getAnimalName() +"'" +  " равно 'мясо' - это" +kitty.equals("meet"));
         System.out.println(kitty.toString());
 
-        Horse horsy = new Horse();
+        Horse horsy = new Horse("hay", "stable", "neigh", "Holstomer");
         horsy.setAnimalName("Horse");
         horsy.setFood("meet");
         horsy.eat();
@@ -40,11 +41,6 @@ public class Main {
         System.out.println(horsy.hashCode());
         System.out.println("'" + horsy.getAnimalName() +"'" +  " равно 'мясо' - это" +horsy.equals("meet"));
         System.out.println(horsy.toString());
-
-
-
-
-        //anim.setFood();
 
     }
 }
