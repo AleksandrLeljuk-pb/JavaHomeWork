@@ -1,19 +1,25 @@
 package com.pb.lelyuk.hw6;
 
+import java.lang.reflect.Constructor;
+
 public class VetСlinic {
     public static void main(String[] args) throws Exception {
         Animal[] animals = new Animal[3];
-        animals[0] = new Dog ("кость","будке","гав", "Шарик");
-        animals[1] = new Cat ("рыбу","квартире","мяу", "Мурзик");
-        animals[2] = new Horse ("овёс","стойле","иго-го", "Буцефал");
+        animals[0] = new Dog("Pedigree", "Budka", "bark", "Pluto");
+        animals[1] = new Cat("mice", "roof", "meow", "Tom");
+        animals[1] = new Horse("hay", "stable", "neigh", "Holstomer");
 
         Class clazz = Class.forName("com.pb.lelyuk.hw6.Veterinarian");
-        Object obj = clazz.getConstructor(new Class[]{}).newInstance();
+        Constructor constr = clazz.getConstructor(new Class[]{});
+        Object obj = constr.newInstance();
         if (obj instanceof Veterinarian) {
-
-            for (Animal animal : animals) {
+            for (Animal animal: animals) {
                 ((Veterinarian) obj).treatAnimal(animal);
             }
         }
+
+
+
     }
+
 }

@@ -57,4 +57,5 @@ public class Cat extends Animal {
         Boolean equa = !super.equals(obj);
         return equa;
     }
+
 }
