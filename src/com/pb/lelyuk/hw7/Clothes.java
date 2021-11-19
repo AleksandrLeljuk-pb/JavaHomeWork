@@ -24,10 +24,4 @@ public abstract class Clothes {
         return colour;
     }
 
-//    public String getInf() {
-//        return "размер " + size.name() + ", " + size.getEurosize() + "-" + size.getDescription() +
-//                ",  цвет " + colour + ", цена " + price;
-//    }
-
-
 }
