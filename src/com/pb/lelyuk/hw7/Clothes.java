@@ -1,9 +1,9 @@
 package com.pb.lelyuk.hw7;
 
 public abstract class Clothes {
-    private Size size;
-    private Float price;
-    private String colour;
+    protected Size size;
+    protected float price;
+    protected String colour;
 
 
     public Clothes(Size size, float price, String colour) {
@@ -16,7 +16,7 @@ public abstract class Clothes {
         return size;
     }
 
-    public Float getPrice() {
+    public float getPrice() {
         return price;
     }
 
@@ -24,5 +24,10 @@ public abstract class Clothes {
         return colour;
     }
 
-    public Clothes() {}
+//    public String getInf() {
+//        return "размер " + size.name() + ", " + size.getEurosize() + "-" + size.getDescription() +
+//                ",  цвет " + colour + ", цена " + price;
+//    }
+
+
 }

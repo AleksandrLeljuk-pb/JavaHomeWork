@@ -1,61 +1,30 @@
 package com.pb.lelyuk.hw7;
 
 public enum Size {
-    XXS,
-    XS,
-    S,
-    M,
-    L;
+    L("Взрослый размер", 40),
+    M("Взрослый размер", 38),
+    S("Взрослый размер", 36),
+    XS("Взрослый размер", 34),
+    XXS("Детский размер", 32);
 
     private String description;
-    private Integer eurosize;
+    private int eurosize;
 
 
-    public Size(String description, Integer eurosize) {
+    Size(String description, int eurosize) {
         this.description = description;
         this.eurosize = eurosize;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+
+    public String getDescription() {
+        return description;
     }
 
-    public Integer getEurosize() {
+    public int getEurosize() {
         return eurosize;
     }
 
-    public void setEurosize(Integer eurosize) {
-        this.eurosize = eurosize;
-    }
-
-    public String getDescription() {
-        String result1;
-        if (description == XXS) {
-            result1 = System.out.println("Детский размер");
-        } else {
-            result1 = System.out.println("Взрослый размер");
-        }
-        return result1;
-    }
-
-    public Integer getEurosize () {
-        Integer result2;
-        switch (eurosize){
-            case XXS:
-                result2 = 32;
-                break;
-            case XS:
-                result2 = 34;
-                break;
-            case S:
-                result2 = 36;
-                break;
-            case M:
-                result2 = 38;
-                break;
-            case L:
-                result2 = 40;
-        }
-        return result2;
-    }
 }
+
+
