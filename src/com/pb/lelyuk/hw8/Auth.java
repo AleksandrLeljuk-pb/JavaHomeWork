@@ -31,7 +31,7 @@ public class Auth {
         this.confirmPassword = confirmPassword;
     }
 
-    public void signUp (String login, String password, String confirmPassword) {
+    public void signUp (String login, String password, String confirmPassword) throws WrongLoginException, WrongPasswordException {
         if(login.length()>=5 & login.length()<=20) {
            if(!login.matches("[^0-9a-zA-Z]+")) {
                System.out.println("Логин соответствует требованиям :-)");
@@ -50,7 +50,7 @@ public class Auth {
 
     }
 
-    public void signIn (String login, String password) {
+    public void signIn (String login, String password) throws WrongLoginException {
         if(!login.matches(this.login) || !password.matches(this.password)) {
             throw new WrongLoginException("Вы неугадали логин или пароль");
         } else {
