@@ -32,7 +32,7 @@ public class FileNumbers {
 
     public static void main(String[] args) {
 
-        Path path = Paths.get("E:/Java/HW/numbers.txt");
+        Path path = Paths.get("E:/Java/HW/src/numbers.txt");
 
         createNumbersFile(path);
 
