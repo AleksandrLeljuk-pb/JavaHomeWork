@@ -53,7 +53,7 @@ public class FileNumbers {
                         i++;
                     }
                 }
-                line = String.join(" ", subLine);
+                line = (String.join(" ", subLine) + System.lineSeparator());
 
                 System.out.println(line);
                 
