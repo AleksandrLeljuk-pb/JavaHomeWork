@@ -2,9 +2,11 @@
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
+import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.nio.file.StandardOpenOption;
 
 public class FileNumbers {
 //------------ метод создания файла -------------------
@@ -56,7 +58,7 @@ public class FileNumbers {
                 System.out.println(line);
                 
                 Path path2 = Paths.get("E:/Java/HW/src/odd-numbers.txt");
-                BufferedWriter writer2 = Files.newBufferedWriter(path2);    
+                BufferedWriter writer2 = Files.newBufferedWriter(path2, StandardOpenOption.APPEND);
                 writer2.write(line);
                 writer2.close();
             }
